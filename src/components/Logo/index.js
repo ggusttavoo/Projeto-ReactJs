@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export function Logo(){
     return(
         <Link to="/">    
-        <h1 className="Logo">Somen<span className="LogoText">sari</span></h1>
+        <h1 className="Logo">MuriloG<span className="LogoText">Somensari</span></h1>
         </Link>
         )
 } 
