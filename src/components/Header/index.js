@@ -15,6 +15,7 @@ export function Header(){
                 <button onClick={handleLogout}><BiLogOut size={28} color="#D82629"/></button>
                 <Link to="/admin"> Links </Link>
                 <Link to="/admin/social"> Redes Sociais </Link>
+                <Link to="/admin/user"> Usuários </Link>
             </nav>
 
         </header>
