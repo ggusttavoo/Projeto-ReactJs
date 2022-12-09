@@ -17,6 +17,35 @@
     color:#F1F1F1;
     margin-bottom: 18px;
 }
+.button-login{
+    position:absolute;
+    top:5%;
+    right:4%;
+    display: center;
+    width: 10%;
+    text-align: center;
+    background: white;
+    border: 2px solid black;
+    padding: 6px 60px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 150%;
+    color:black;
+}
+.button-login:hover{
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    transition: all 0.3s;
+    transition-delay: 0.05s;
+}
+.button-login:hover:after{
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    text-rendering: auto;
+}
+
 .links{
     display: flex;
     max-width: 600px;

@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './login.css'
-import { Logo } from '../../../components/Logo'
-import { auth } from '../../../services/firebase'
+import { Logo } from '../../components/Logo'
+import { auth } from '../../services/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
-import { Input } from '../../../components/Input'
+import { Input } from '../../components/Input'
 
 export default function Login(){
     const [email, setEmail] = useState("");

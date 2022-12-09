@@ -1,10 +1,11 @@
 import './home.css'
-import { Logo } from '../../../components/Logo'
-import { Social } from '../../../components/Social'
+import { Link } from 'react-router-dom'
+import { Logo } from '../../components/Logo'
+import { Social } from '../../components/Social'
 import { FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 import { getDocs, collection, orderBy, query, doc, getDoc } from 'firebase/firestore'
-import { db } from '../../../services/firebase'
+import { db } from '../../services/firebase'
 
 export default function Home(){
     const [links, setLinks] = useState([]);
@@ -56,6 +57,7 @@ export default function Home(){
 
     return(
         <div className="home-container">
+            <Link to = "/login"><button className='button-login'>Login</button></Link>
             <Logo/>
             <span>Veja meus links 👇</span>
 
@@ -63,7 +65,7 @@ export default function Home(){
                 
                 {links.map((item) => (
                 <section key={item.id} className="link-area" style={{backgroundColor: item.bg}}>
-                     <a target="_blank" href={item.url}>
+                     <a target="blank" href={item.url}>
                          <p style={{color: item.color}} className="link-text">{item.name}</p>
                      </a>
                  </section>

@@ -9,8 +9,7 @@ import { ToastContainer} from 'react-toastify';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ToastContainer autoClose={2300}/>
+    <ToastContainer autoClose={3000}/>
     <RouterProvider router={router}/>
   </React.StrictMode>
 );
-

@@ -1,11 +1,10 @@
 import './networks.css'
 import { useState, useEffect } from 'react'
-import { Header } from '../../../components/Header'
-import { Input } from '../../../components/Input'
+import { Header } from '../../components/Header'
+import { Input } from '../../components/Input'
 import { MdAddLink} from 'react-icons/md'
-import { db } from '../../../services/firebase'
+import { db } from '../../services/firebase'
 import { setDoc, doc, getDoc } from 'firebase/firestore'
-import { async } from '@firebase/util'
 import { toast } from 'react-toastify'
 
 export default function Networks(){
@@ -29,7 +28,7 @@ export default function Networks(){
 
     }, [])
 
-    async function handleSave(e){
+    function handleSave(e){
         e.preventDefault();
         
         setDoc(doc(db, "social", "link"),{
