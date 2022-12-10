@@ -47,7 +47,7 @@ export default function Admin(){
 
         .then(() => {setNameInput("")
         setUrlInput("") 
-        console.log("Link registrado com sucesso!")})
+        toast.success("Cadastrado com Sucesso!")})
 
         .catch((error) => { 
         console.log("ERRO AO REGISTRAR" + error) 

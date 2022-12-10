@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import './login.css'
-import { Logo } from '../../components/Logo'
+import { useState } from 'react'
 import { auth } from '../../services/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
-import { Input } from '../../components/Input'
 
 export default function Login(){
     const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ export default function Login(){
         }
         signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            toast.success("Acesso Concedido")
+            toast.success("Bem-vindo de Volta!")
             navigate("/admin", { replace: true })
         })
         .catch(() => {
@@ -31,14 +29,27 @@ export default function Login(){
 
     }
     return(
-        <div className="login-container" onSubmit={handleLogin}>
-            <Logo/>
-
-            <form className="form">
-                <Input type="email" placeholder="Digite seu E-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <Input type="password" placeholder="Senha" autoComplete="on" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-                <button type="submit">Acessar</button>
-            </form>
+        <div className='corpo'>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <div className='login'>
+            <div className='avatar'>
+                <img src='https://relvado.rs.gov.br/site/custom/default/img/no-avatar.png' alt=""/>
+            </div>
+            <h2>Login</h2>
+            <h3>Bem-vindo de Volta!</h3>
+                <form className="login-form" onSubmit={handleLogin}>
+                    <div className='textbox'>
+                        <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <span className='material-symbols-outlined'>account_circle</span>
+                    </div>
+                    <div className='textbox'>
+                        <input type="password" placeholder="Senha" autoComplete="on" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                        <span className='material-symbols-outlined'>lock</span>
+                    </div>
+                    <button type="submit">Acessar</button>
+                    <p className='cadastro'>Ainda não possui cadastro? <a href='https://www.linkedin.com/login/pt' target="blank">Cadastrar-se</a></p>
+                </form>
+        </div>
         </div>
     )
 }

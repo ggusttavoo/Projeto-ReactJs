@@ -59,7 +59,7 @@ export default function Home(){
         <div className="home-container">
             <Link to = "/login"><button className='button-login'>Login</button></Link>
             <Logo/>
-            <span>Veja meus links 👇</span>
+            <span>Veja nossos links 👇</span>
 
             <main className="links">
                 
