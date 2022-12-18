@@ -9,13 +9,22 @@ export function Header(){
         await signOut(auth)
     }
 
+    const links = document.querySelectorAll('a');
+    const currentPage = window.location.pathname;
+    
+    links.forEach(link => {
+      if (link.pathname === currentPage) {
+        link.style.color = 'orange';
+      }
+    });
+
     return(
         <header className="admin-header">
             <nav className="nav-header">
                 <Link to = "/"> <button onClick={handleLogout}><BiLogOut size={28} color="#D82629"/></button> </Link>
                 <Link to="/admin"> Links </Link>
                 <Link to="/admin/social"> Redes Sociais </Link>
-                <Link to="/admin/user"> Usuários </Link>
+                <Link to="/admin/users"> Usuários </Link>
             </nav>
 
         </header>

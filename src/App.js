@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <Private> <Networks/> </Private>
   },
   {
-    path: '/admin/user',
+    path: '/admin/users',
     element: <Private> <User/> </Private>
   },
   {
