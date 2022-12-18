@@ -21,10 +21,6 @@
     color: white;
 }
 
-.cadastro{
-    color: black;
-}
-
 .corpo{
     display: grid;
     place-items: center;

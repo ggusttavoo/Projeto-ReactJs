@@ -47,7 +47,6 @@ export default function Login(){
                         <span className='material-symbols-outlined'>lock</span>
                     </div>
                     <button type="submit">Acessar</button>
-                    <p className='cadastro'>Ainda não possui cadastro? <a href='https://www.linkedin.com/login/pt' target="blank">Cadastrar-se</a></p>
                 </form>
         </div>
         </div>
